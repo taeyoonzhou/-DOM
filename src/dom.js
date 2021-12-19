@@ -2,8 +2,8 @@ window.dom = {
     create(tagName) {
         return document.createElement(tagName);
     },
-    find(selector){
-        return document.querySelectorAll(selector)
+    find(selector,scope){
+        return (scope || document).querySelectorAll(selector)
     },
     style(node,name,value){
         if(arguments.length===3){
